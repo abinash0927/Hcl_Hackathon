@@ -26,6 +26,7 @@ try:
     class CustomerListCreateView(ListCreateAPIView):
         queryset = Customer.objects.all()
         serializer_class = CustomerSerializer
+        permission_classes = [IsAuthenticated]
 except Exception as e:
     print(f"Error creating Customer: {e}")
 
@@ -50,10 +51,9 @@ class CustomerRetrieveUpdateDestroyView(RetrieveUpdateDestroyAPIView):
 def updateKyc(request, email):
     customer = Customer.objects.get(email=email)
     if customer.kyc_verified:
-        return HttpResponse("KYC succesfully verified.")
+        return HttpResponse("KYC succesfully verified.you will be redirected to login page.")
     else:
         return HttpResponse("KYC not yet verified.Check your documents.")
-
 
 def ReviewKycView(request, email):
 
