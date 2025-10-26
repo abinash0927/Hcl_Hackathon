@@ -8,6 +8,8 @@ from pathlib import Path
 from rest_framework.routers import DefaultRouter
 from rest_framework import request
 from rest_framework import permissions
+
+
 # Create your views here.
 class IsOwnerOrReadOnly(permissions.BasePermission):
 
@@ -28,7 +30,7 @@ except Exception as e:
     print(f"Error creating Customer: {e}")
 
 class CustomerUpdateKycView(RetrieveUpdateDestroyAPIView):
-    queryset = Customer.objects.all()
+    queryset = Customer.objects.all()    
     serializer_class = CustomerSerializer
     lookup_field = 'email'
     permission_classes = [IsOwnerOrReadOnly, IsAuthenticated]

@@ -34,4 +34,4 @@ Database: MySQL Version Control: Git & GitHub
 
 6️⃣ Configure settings.py Change database for Mysql with your details
 
-Now open your browser and go to http://127.0.0.1:8000/
+Now open your browser and go to http://127.0.0.1:8000/customers/

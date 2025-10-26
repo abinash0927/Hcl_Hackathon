@@ -2,7 +2,7 @@ from django.test import TestCase
 from .models import Customer
 # Create your tests here.
 class SimpleTest(TestCase):
-    def setUpData(self):
+    def setUp(self):
         # Set up data for the whole TestCase
         customer = Customer.objects.create(first_name="John", last_name="Doe", email="johndoe@gmail.com", password="password123", phone="1234567890", address="123 Main St", kyc_type="Aadhaar")
         customer.save()

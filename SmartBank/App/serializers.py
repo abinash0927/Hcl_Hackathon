@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Customer
-
+from  rest_framework_simplejwt.authentication import JWTAuthentication
+from django.contrib.auth import get_user_model
 # Serializer for Customer model
 class CustomerSerializer(serializers.ModelSerializer):
     class Meta:
