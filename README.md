@@ -14,7 +14,7 @@ Smart banking is a full-featured banking & managing transaction application buil
 
 🧠 Tech Stack
 
-Backend: Django,Rest_framework,Swagger,Python 
+Backend: Django,Rest_framework,Swagger,Python 3.11.8
 Database: MySQL Version Control: Git & GitHub
 
 ⚙️ Installation & Setup 
