@@ -1,4 +1,5 @@
 django
 djangorestframework
-drf_spectaculars
+drf_spectacular
 mysqlclient
+Pillow
