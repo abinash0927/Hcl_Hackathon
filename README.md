@@ -20,7 +20,7 @@ Database: MySQL Version Control: Git & GitHub
 ⚙️ Installation & Setup 
 1️⃣ Create and Activate Virtual Environment python -m venv venv source venv/bin/activate # For Linux/Mac venv\Scripts\activate # For Windows
 
-2️⃣ Clone the Repository git clone Hcl_Hackathon cd Hcl_Hackathon
+2️⃣ Clone the Repository git clone [Hcl_Hackathon](https://github.com/abinash0927/Hcl_Hackathon.git) cd Hcl_Hackathon
 
 3️⃣ Install Dependencies pip install -r requirements.txt
 
