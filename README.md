@@ -5,12 +5,12 @@ Smart banking is a full-featured banking & managing transaction application buil
 🚀 Features
 
 🧾 User authentication (signup, login, logout)
+  > Create customer table and fields [ 'name,'contact','email','password','kyc(pan , aaddhar etc.)'].
+  > Subitted Kyc details will be viewed and verified by admin.
+  > After Validating details,account will be Created and notify the customer.
+    FLow:
+      Account creation ➜ Kyc Verification ➜ Notifying Customer 
 
-🛍️ User Transaction
-
-🗫 Request loan
-
-📦 Admin panel for user data management
 
 🧠 Tech Stack
 
