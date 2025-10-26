@@ -1,4 +1,5 @@
 from django.shortcuts import render,HttpResponse,redirect
+from django.core.exceptions import ObjectDoesNotExist
 from .models import Customer
 from .serializers import CustomerSerializer,ReviewKycSerializer,CustomerKycSerializer
 from rest_framework.generics import ListCreateAPIView,RetrieveUpdateDestroyAPIView
@@ -19,9 +20,12 @@ class IsOwnerOrReadOnly(permissions.BasePermission):
         # Write permissions are only allowed to the owner of the snippet.
         return obj.email == request.user
 #view for Customer Api
-class CustomerListCreateView(ListCreateAPIView):
-    queryset = Customer.objects.all()
-    serializer_class = CustomerSerializer
+try:
+    class CustomerListCreateView(ListCreateAPIView):
+        queryset = Customer.objects.all()
+        serializer_class = CustomerSerializer
+except Exception as e:
+    print(f"Error creating Customer: {e}")
 
 class CustomerUpdateKycView(RetrieveUpdateDestroyAPIView):
     queryset = Customer.objects.all()

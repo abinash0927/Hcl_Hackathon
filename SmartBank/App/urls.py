@@ -9,7 +9,6 @@ urlpatterns = [
     path('customers/', CustomerListCreateView.as_view(), name='customer-list-create'),
     path('customers_update/<str:email>/', CustomerUpdateKycView.as_view(), name='customer-list-create'),
     path('customers/<str:email>/', CustomerRetrieveUpdateDestroyView.as_view(), name='customer-detail'),
-    
     path('customers/<str:email>/', CustomerRetrieveUpdateDestroyView.as_view(), name='customer-detail'),
     path('customers/<str:email>/kyc_verified/', updateKyc, name='customer-detail'),
     path('kyc_documents/<str:email>/', ReviewKycView, name='customer-detail'),
